@@ -48,7 +48,7 @@ class ProjectsManager {
         icon: 'fab fa-js-square',
         technologies: ['JavaScript', 'HTML5', 'CSS3', 'Canvas'],
         github: 'https://github.com/minngk/gominage',
-        demo: null,
+        demo: 'https://minngk.github.io/gominage/',
         featured: true,
         createdAt: '2025-01-01',
         status: 'active',
