@@ -1,0 +1,31 @@
+{
+  "projects": [
+    {
+      "id": "gominage",
+      "name": "gominage",
+      "description": "HTML5 Canvasを使用したブラウザゲーム。JavaScript ES6+とカスタム物理シミュレーションで開発されたクライアントサイドゲームです。",
+      "icon": "fab fa-js-square",
+      "technologies": ["JavaScript", "HTML5", "CSS3", "Canvas"],
+      "github": "https://github.com/minngk/gominage",
+      "demo": null,
+      "featured": true,
+      "createdAt": "2025-01-01",
+      "status": "active",
+      "color": "#F7DF1E",
+      "language": "JavaScript"
+    }
+  ],
+  "theme": {
+    "name": "cafe",
+    "colors": {
+      "primary": "#6b4423",
+      "secondary": "#8b6f47",
+      "accent": "#d4a574"
+    }
+  },
+  "settings": {
+    "showFeaturedFirst": true,
+    "maxProjectsPerPage": 9,
+    "animationDuration": 300
+  }
+}

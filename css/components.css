@@ -1,0 +1,265 @@
+/* Project Card Components */
+.project-card {
+  background: linear-gradient(145deg, #ffffff, #f9fafb);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-fast);
+  border: 1px solid var(--card-border);
+  position: relative;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent-gradient);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.project-card-content {
+  padding: 30px;
+}
+
+.project-icon {
+  font-size: 3rem;
+  color: var(--accent-primary);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.project-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.tech-tag {
+  background: rgba(156, 179, 156, 0.15);
+  color: var(--text-primary);
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(156, 179, 156, 0.3);
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+  border: 2px solid transparent;
+}
+
+.project-link.primary {
+  background: var(--accent-gradient);
+  color: white;
+}
+
+.project-link.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 165, 116, 0.4);
+}
+
+.project-link.secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--accent-primary);
+}
+
+.project-link.secondary:hover {
+  background: var(--accent-primary);
+  color: white;
+}
+
+.project-link i {
+  font-size: 0.9rem;
+}
+
+/* Featured Project Badge */
+.featured-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--accent-gradient);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Loading State */
+.project-card.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.project-card.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Empty State */
+.projects-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+}
+
+.projects-empty i {
+  font-size: 4rem;
+  color: var(--accent-primary);
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.projects-empty h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.projects-empty p {
+  font-size: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Button Components */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  background: var(--accent-gradient);
+  color: white;
+  box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 2px solid var(--accent-primary);
+  box-shadow: none;
+}
+
+.btn.secondary:hover {
+  background: var(--accent-primary);
+  color: white;
+}
+
+/* Card Variants */
+.project-card.go-lang {
+  background: linear-gradient(145deg, #e6f3ff, #cce7ff);
+}
+
+.project-card.javascript {
+  background: linear-gradient(145deg, #fff9e6, #ffefcc);
+}
+
+.project-card.python {
+  background: linear-gradient(145deg, #e6f7ff, #ccf0ff);
+}
+
+.project-card.react {
+  background: linear-gradient(145deg, #e6fffa, #ccfff5);
+}
+
+/* Accessibility Enhancements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .project-card {
+    border: 2px solid var(--text-primary);
+  }
+  
+  .tech-tag {
+    border: 1px solid var(--text-primary);
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-link,
+  .btn {
+    transition: none;
+  }
+  
+  .project-card:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="minngk - SRE のポートフォリオサイト">
+    <title>minngk | Portfolio</title>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Inline CSS for testing -->
+    <style>
+    :root {
+      --primary-bg: linear-gradient(135deg, #f8faf8 0%, #f0f4f0 100%) !important;
+      --text-primary: #2d3d2d !important;
+      --text-secondary: #5a6b5a !important;
+      --accent-primary: #e8a5b5 !important;
+      --accent-secondary: #f2b8c6 !important;
+    }
+    body {
+      background: linear-gradient(135deg, #f8faf8 0%, #f0f4f0 100%) !important;
+      color: #2d3d2d !important;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh !important;
+    }
+    .header-section {
+      background: linear-gradient(135deg, #f8faf8 0%, #f0f4f0 100%) !important;
+    }
+    /* ソフトピンクアクセント */
+    .social-links a:hover {
+      background: #e8a5b5 !important;
+      color: white !important;
+    }
+    .section-title::after {
+      background: linear-gradient(45deg, #e8a5b5, #f2b8c6) !important;
+    }
+    .project-card::before {
+      background: linear-gradient(45deg, #e8a5b5, #f2b8c6) !important;
+    }
+    .project-link.primary {
+      background: linear-gradient(45deg, #e8a5b5, #f2b8c6) !important;
+    }
+    .tech-tag {
+      background: rgba(232, 165, 181, 0.15) !important;
+      border: 1px solid rgba(232, 165, 181, 0.3) !important;
+    }
+    </style>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css?v=2">
+    <link rel="stylesheet" href="css/components.css?v=2">
+    <link rel="stylesheet" href="css/responsive.css?v=2">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/profile.svg">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header-section">
+        <div class="container">
+            <div class="profile-container">
+                <div class="profile-image-container">
+                    <img src="https://github.com/minngk.png" alt="minngkのプロフィール画像" class="profile-image">
+                </div>
+                <h1 class="profile-name">minngk</h1>
+                <p class="profile-subtitle">SRE / bookworm</p>
+                
+                <!-- Social Links -->
+                <div class="social-links">
+                    <a href="https://github.com/minngk" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://zenn.dev/meirai" target="_blank" rel="noopener noreferrer" aria-label="Zenn">
+                        <i class="fas fa-book-open" aria-hidden="true"></i>
+                    </a>
+                </div>
+                
+                <!-- GitHub Stats -->
+                <div class="github-stats">
+                    <div class="stat-card">
+                        <span class="stat-number" id="repos-count">?</span>
+                        <span class="stat-label">リポジトリ</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="followers-count">?</span>
+                        <span class="stat-label">フォロワー</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="following-count">?</span>
+                        <span class="stat-label">フォロー中</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>クリエイティブな気持ちを大事にしています</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <h2 class="section-title">プロジェクト</h2>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="js/github-api.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
